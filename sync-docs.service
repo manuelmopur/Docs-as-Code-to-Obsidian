@@ -1,4 +1,22 @@
 [Unit]
+Description=Sincronización de Documentación Docs-as-Code
+Documentation=https://github.com/tu-usuario/tu-repo
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/scripts/sync_docs.sh
+Restart=on-failure
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+# Entorno limpio
+Environment=LANG=C.UTF-8
+
+[Install]
+WantedBy=default.target
+[Unit]
 Description=Sincronizacion Docs-as-Code a Obsidian
 After=default.target
 
