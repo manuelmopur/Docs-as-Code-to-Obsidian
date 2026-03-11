@@ -8,7 +8,7 @@ set -euo pipefail
 # --- Configuracion ---
 
 ORIGEN="${HOME}/Projects/MyRepo"
-DESTINO="${HOME}/Documents/Obsidian"
+DESTINO="${HOME}/Documents/Obsidian/carpeta_a_sincronizar"
 
 LOG_DIR="${HOME}/.local/share/sync-docs"
 LOG_FILE="${LOG_DIR}/sync_docs.log"
